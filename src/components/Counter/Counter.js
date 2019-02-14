@@ -7,11 +7,17 @@ class Counter extends Component {
             number: 0
         }
         this.addNumber = this.addNumber.bind(this)
+        this.minusNumber = this.minusNumber.bind(this)
     }
 
 addNumber() {
     this.setState({
         number: +1
+    })
+}
+minusNumber() {
+    this.setState({
+        number: -1
     })
 }
 
@@ -21,6 +27,7 @@ addNumber() {
                 <h1>Counter</h1>
                     <p className ="number">{this.state.number}</p>
                     <button className="plus" onClick={this.addNumber} >increase</button>
+                    <button className="minus" onClick={this.minusNumber} >minus</button>
             </div>
         );
     }
