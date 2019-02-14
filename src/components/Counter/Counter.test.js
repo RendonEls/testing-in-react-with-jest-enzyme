@@ -14,4 +14,8 @@ describe('Counter component', () => {
     expect(component.contains(<h1>Counter</h1>)).toBe(true)
   })
 
+  it('should have a state attribute called number initialized to zero', () => {
+    expect(component.state('number')).toEqual(0)
+  })
+
 })
